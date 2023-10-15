@@ -43,12 +43,11 @@ export function Detail() {
           formatedLowPrice: price.format(Number(result.low_24h)),
           formatedHighPrice: price.format(Number(result.high_24h)),
         };
-
         setArrayCoin(resultGetApi);
       })
       .catch((error) => {
         navigate("/");
-        console.error(error);
+        console.error("deu erro", error);
       })
       .finally(() => {
         setIsLoading(false);

@@ -1,45 +1,69 @@
-.container{
+.container {
   margin: 0 14px;
 }
-
-.form{
+.form {
   width: 100%;
   display: flex;
   gap: 14px;
 }
 
-.form input{
+.form input {
   width: 100%;
   height: 44px;
   border-radius: 8px;
-  border:0;
+  border: 0;
   padding: 0 8px;
   outline: none;
 }
 
-.form button{
+.form button {
   background: transparent;
-  border:0;
+  border: 0;
+}
+
+.helperText{
+  color: #f7f7f7;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 table {
-  /* border-collapse: collapse; */
-  border-collapse:separate; 
   border-spacing: 0 14px;
   margin: 0;
   padding: 0;
   width: 100%;
   table-layout: fixed;
+  display: flex;
+  flex-direction: column;
+}
+table  thead tr{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+ tbody{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-top: 15px;
 }
 
-table caption {
-  font-size: 16px;
-  margin: .5em 0 .75em;
+.tr {
+  background-color: #313132;
+  transition: all 0.3s ease ;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  width: 100%;
+  padding: 5px;
+}
+.tr:hover{
+  transform: scale(1.02);
+  color: white;
+  box-shadow: 0 0 15px 5px #545455;
 }
 
-.tr{
-  background-color: #1D1C20;
-}
 
 td:first-child,
 th:first-child {
@@ -64,44 +88,51 @@ table th {
   color: #f7f7f7;
 }
 
-
-
-.tdLabel span{
+.tdLabel span {
   font-weight: bold;
   font-size: 18px;
-  color: #FFF;
+  color: #fff;
 }
 
-.tdLabel, .tdProfit, .tdLoss{
-  color: #BBBBBB;
+.tdLabel,
+.tdProfit,
+.tdLoss {
+  color: #bbbbbb;
 }
 
-.tdProfit span{
-  color:#12F98A;
+.tdProfit span {
+  color: #12f98a;
 }
-.tdLoss span{
-  color:#F91257;
-}
-
-.link{
-  text-decoration: none;
-  color: #FFF;
-  transition: color 0.5s;
+.tdLoss span {
+  color: #f91257;
 }
 
-.link:hover{
-  color: #30BEFF;
+@media screen and (min-width: 701px) {
+
+  .tr td{
+    display: flex;
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 700px) {
   table {
     border: 0;
   }
+  
+.helperText{
+  color: #f7f7f7;
+  margin-top: 10px;
+  font-size: 2.6vw;
+}
 
   table caption {
     font-size: 1.3em;
   }
-  
+
   table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -112,27 +143,27 @@ table th {
     position: absolute;
     width: 1px;
   }
-  
+
   .tr {
     border-bottom: 1px solid #ddd;
     display: block;
     margin-bottom: 14px;
   }
-  
+
   table td {
     border-bottom: 1px solid rgba(221, 221, 221, 0.164);
     display: block;
     font-size: 14px;
     text-align: right;
   }
-  
+
   table td::before {
     content: attr(data-label);
     float: left;
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
   table td:last-child {
     border-bottom: 0;
   }
@@ -147,12 +178,11 @@ table th {
     border-radius: 0;
   }
 
-  table td::before{
+  table td::before {
     content: attr(data-label);
     float: left;
     font-family: var(--bold);
     color: #f7f7f7;
     text-transform: uppercase;
   }
-
 }

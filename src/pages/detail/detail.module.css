@@ -10,16 +10,14 @@
   margin-bottom: 14px;
 }
 .content {
-  max-width: 600px;
+  width: 600px;
   background-color: #0f0f0f;
-  margin: 24px auto;
+  margin: 24px 0;
   padding: 24px;
   border-radius: 25px;
   box-shadow: 3px 3px 10px 2px rgb(0, 0, 0, 0.4);
   gap: 10px;
   font-size: 18px;
-  
-
 }
 
 .content p:not(:last-of-type) {
@@ -48,4 +46,12 @@
   box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.3); 
   background-color: #2a2a2a;
   transform: scale(1.05);
+}
+@media screen and (max-width: 700px) {
+  .content {
+    width: 95%;
+    margin: 0;
+    padding: 24px;
+    font-size: 3.5vw;
+  }
 }
