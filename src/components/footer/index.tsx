@@ -9,7 +9,7 @@ export default function Footer() {
             <h2>{"{AX}"}</h2>
           </a>
           <div className={styles.direitos}>
-            <p>Todos os Direitos Reservados 2023© Adrian Kauã Xavier</p>
+            <p>Todos os Direitos Reservados 2023 © Adrian Kauã Xavier</p>
           </div>
         </div>
       </footer>
